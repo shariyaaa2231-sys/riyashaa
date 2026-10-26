@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sakthi ❤️ Dharshini | Our Love Story</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  color: white;
+  text-align: center;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3, #a18cd1);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 35px 15px 15px;
+}
+
+h1 {
+  font-size: clamp(32px, 7vw, 55px);
+  text-shadow: 2px 3px 10px #9d174d;
+}
+
+h2 {
+  margin: 20px 0;
+}
+
+p {
+  line-height: 1.8;
+}
+
+.hero {
+  padding: 30px 15px;
+}
+
+.couple-photo {
+  width: min(85%, 350px);
+  height: 400px;
+  object-fit: cover;
+  border: 6px solid white;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px #751a4b66;
+  margin: 20px auto;
+}
+
+.btn {
+  background: white;
+  color: #e11d65;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.06);
+  background: #ffe4ed;
+}
+
+section {
+  margin: 25px auto;
+  padding: 25px 18px;
+  width: min(92%, 650px);
+  background: #ffffff25;
+  backdrop-filter: blur(8px);
+  border: 1px solid #ffffff55;
+  border-radius: 22px;
+}
+
+#letter {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff0f5;
+  color: #a21caf;
+  border-radius: 15px;
+  line-height: 2;
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  animation: floatUp 6s linear forwards;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+footer {
+  padding: 30px 10px;
+  font-size: 14px;
+}
+#lockscreen{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,#ff8bd1,#f7b5ef,#d9b8ff);
+    font-family: Georgia, serif;
+    text-align: center;
+    overflow: auto;
+}
+.lock-box{
+    width: min(90%,650px);
+    padding: 350x 20px;
+    box-sizing: border-box;
+    background:rgba(225, 225,225, 0.18);
+    box-shadow: 0 10px 40px rgba(180, 30, 120, 0.25);
+}
+#lock-icon{
+    font-size: 65px;
+    margin-bottom: 10px;
+}
+.lock-box h1 {
+    color: white;
+    font-size: clamp(32px, 6vw, 55px);
+    margin: 10px 0;
+    text-shadow: 2px 4px 8px #d94c9c;
+  }
+
+  .lock-box h2 {
+    color: white;
+    font-size: clamp(20px, 4vw, 30px);
+    margin: 15px 0 25px;
+  }
+
+  .lock-box p {
+    color: white;
+    font-size: 18px;
+  }
+
+  .lock-box input {
+    display: block;
+    margin: 15px auto;
+    padding: 14px;
+    width: min(90%, 280px);
+    box-sizing: border-box;
+    font-size: 17px;
+    border: 2px solid #ff4da6;
+    border-radius: 12px;
+    background: white;
+  }
+
+  .lock-box button {
+    margin-top: 10px;
+    padding: 14px 30px;
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+    background: #ff2995;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #d94c9c;
+  }
+
+  .lock-box button:hover {
+    background: #e60073;
+  }
+
+  #errorMessage {
+    color: #8b003d;
+    font-weight: bold;
+  }
+</style>
+</head>
+
+<body>
+    <!-- LOCK SCREEN -->
+    <div id="lockScreen">
+        <h1>🔒 Our Love Story ❤️</h1>
+        <p>Sakthi ❤️ Dharshini</p>
+
+        <input type="date" id="secretDate">
+
+        <button onclick="unlockLove()">Unlock ❤️</button>
+
+        <p id="errorMessage"></p>
+    </div>
+
+    <!-- MAIN WEBSITE: ஆரம்பத்தில் மறைந்திருக்கும் -->
+    <div id="loveWebsite" style="display: none;">
+
+        <!-- உன்னுடைய பழைய website code முழுவதும் இங்கே -->
+
+<header>
+  <h1>Sakthi ❤️ Dharshini</h1>
+  <p>Two Hearts, One Beautiful Story 💕</p>
+</header>
+
+
+<div class="hero">
+  <h2>Our Love Story 💖</h2>
+
+  <!-- Replace couple.jpg with your couple photo -->
+  <img
+    class="couple-photo"
+    src="c:\Users\acer\OneDrive\Pictures\WhatsApp Image 2026-10-26 at 10.00.50 AM.jpeg" alt="Sakthi and Dharshini"
+    onerror="this.style.display='none'; document.getElementById('photoHelp').style.display='block';"
+  >
+
+  <p id="photoHelp" style="display:none;">
+    📸 Add your couple photo as couple.jpg
+    in the same folder as this HTML file.
+  </p>
+
+  <p>Every love story is beautiful, but ours is my favourite. 🌹</p>
+</div>
+
+<section>
+  <h2>💌 A Letter For You</h2>
+  <p>My dearest Dharshini, you make my world brighter! ❤️</p>
+
+  <button class="btn" onclick="showLetter()">
+    Open My Love Letter 💌
+  </button>
+
+  <div id="letter">
+    My Dear Dharshini ❤️<br><br>
+
+Unna first time paatha naal la irundhu, en life full ah maari pochu 😌
+Nee siricha pothum, en world full ah light aagidum ✨
+Un kooda irukkara ovvoru nimishamum enakku oru gift madhiri dhaan 💞
+
+Nee enakku just oru person illa…
+Nee en heart, en peace, en happiness 💘
+
+Indha birthday la naan wish pannradhu onnu dhaan…
+Nee eppovume ippadiye happy ah irukkanum, naan un pakkathula irukkanum 😘
+
+Love you more than anything diii 🫶🏻💋<br><br>
+
+    Love you forever, Dharshini! ❤️😘<br><br>
+    — en kathali 💝
+  </div>
+</section>
+
+<section>
+  <h2>💞 Our Special Day</h2>
+  <p>Ungal love start aana date-ai keezhe set pannunga.</p>
+
+  <input
+    type="date"
+    id="loveDate"
+    style="padding:12px;border-radius:10px;border:none;margin:15px;"
+  >
+
+  <br>
+
+  <button class="btn" onclick="calculateLove()">
+    Calculate Our Love ❤️
+  </button>
+
+  <h2 id="counter"></h2>
+</section>
+
+<section>
+  <h2>🎵 Our Romantic Music</h2>
+  <p>Ungal favourite romantic song-ai add pannunga.</p>
+
+  <!-- Add your own music file as love-song.mp3 -->
+  <audio id="music" loop controls>
+    <source src="c:\Users\acer\Music\WhatsApp Audio 2026-10-26 at 10.11.5 AM.mpeg" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+
+  <p style="font-size:13px;margin-top:10px;">
+    Place love-song.mp3 in the same folder.
+  </p>
+</section>
+
+<section>
+  <h2>💖 A Little Surprise</h2>
+  <p id="surprise">Ready for a little love magic? 🥰</p>
+
+  <button class="btn" onclick="surprise()">
+    Click For Surprise 🎁
+  </button>
+</section>
+
+<footer>
+  Made with ❤️ by Sakthi for Dharshini<br>
+  Forever & Always 💍
+</footer>
+
+<script>
+    // 🔐 SPECIAL DATE LOCK
+// Example date: 14 February 2025
+const SPECIAL_DATE = "2025-06-25";
+
+function unlockLove() {
+  const entered = document.getElementById("secretDate").value;
+
+  if (entered === SPECIAL_DATE) {
+    document.getElementById("lockScreen").style.display = "none";
+    document.getElementById("loveWebsite").style.display = "block";
+  } else {
+    error.textContent = "Wrong date! Try again ❤️";
+  }
+}
+function showLetter() {
+  const letter = document.getElementById("letter");
+
+  if (letter.style.display === "block") {
+    letter.style.display = "none";
+  } else {
+    letter.style.display = "block";
+    createHearts(15);
+  }
+}
+
+function calculateLove() {
+  const input = document.getElementById("loveDate").value;
+  const counter = document.getElementById("counter");
+
+  if (!input) {
+    counter.textContent = "Please select your special date ❤️";
+    return;
+  }
+
+  const start = new Date(input + "T00:00:00");
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  if (start > today) {
+    counter.textContent = "Choose a date in the past or today 💕";
+    return;
+  }
+
+  const days = Math.floor(
+    (today - start) / (1000 * 60 * 60 * 24)
+  );
+
+  counter.textContent =
+    "We've shared " + days + " beautiful days together! ❤️";
+}
+
+function surprise() {
+  document.getElementById("surprise").textContent =
+    "Sakthi ❤️ Dharshini — You are my today, my tomorrow, and my forever! 💋💖";
+
+  createHearts(30);
+}
+
+function createHearts(count) {
+  const symbols = ["❤️", "💖", "💕", "💗", "💘"];
+
+  for (let i = 0; i < count; i++) {
+    const heart = document.createElement("span");
+
+    heart.className = "heart";
+    heart.textContent =
+      symbols[Math.floor(Math.random() * symbols.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (18 + Math.random() * 24) + "px";
+    heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 7000);
+  }
+}
+
+// Floating hearts in the background
+setInterval(() => createHearts(1), 900);
+</script>
+
+</body>
+</html>
